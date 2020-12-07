@@ -21,7 +21,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.get("/", function (req, res) {
-  res.render("home", { startingContent: homeStartingContent, posts : posts });
+  res.render("home", { startingContent: homeStartingContent, posts: posts });
+});
+
+app.get("/posts/:test", function (req, res) {
+  // Express routing : A new concept
+  console.log(req.params.test); //anything typed on the path root/posts ....  will be console logged
+  res.redirect("/");
 });
 
 app.get("/about", function (req, res) {
