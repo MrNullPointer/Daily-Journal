@@ -5,7 +5,7 @@
 <p><%= startingContent %></p>
 
 <% posts.forEach(function(post){ %> 
-<%const postContent = post.content.substring(0, 70);%>
+<%const postContent = post.content.substring(0, 100);%>
 <h1><%= post.title %></h1>
 <p>
     <%= postContent + ("... ") %>
